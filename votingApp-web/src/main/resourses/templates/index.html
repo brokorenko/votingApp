@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Voting List</title>
+</head>
+<body>
+<h1>Voting List</h1>
+
+<table>
+    <tr>
+        <th>Voting Object</th>
+        <th>After</th>
+        <th>Against</th>
+        <th>Reference</th>
+    </tr>
+    <tr th:each="voting : ${votings}">
+        <td th:text="${voting.votingObject}">Voting</td>
+        <td th:text="${voting.after}">0</td>
+        <td th:text="${voting.against}">0</td>
+        <td th:text="${voting.reference}">0</td>
+    </tr>
+</table>
+
+</body>
+</html>
